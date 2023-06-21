@@ -1,10 +1,20 @@
 # Setup
 
-make sure you have a fresh anvil started
+1. Make sure you are using [PR 4931](https://github.com/foundry-rs/foundry/pull/4931)
 
-```bash
-anvil
-```
+
+1. Do not forget to modify [lib/forge-std/src/Vm.sol](lib/forge-std/src/Vm.sol) to include that function signature
+
+    ```solidity
+    function sendRawTransaction(bytes memory) external;
+    ```
+
+1. make sure you have a fresh anvil started
+
+    ```bash
+    anvil
+    ```
+
 
 
 # Demo
